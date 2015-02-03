@@ -27,6 +27,7 @@ Game.prototype.start = function(){
     var space = self.grid.select(x, y);
     if(space.isTaken){
       alert('This space is already taken');
+      self.currentPlayer.move(cb);
       return;
     } else {
       space.takenBy(self.currentPlayer);
